@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6C7660D42C3EE81C001B3B80 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7660D32C3EE81C001B3B80 /* QuizViewController.swift */; };
+		6CB33EFF2C43A29D00A16D04 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB33EFE2C43A29D00A16D04 /* ResultViewController.swift */; };
 		6CD5022C2C38E04D00BBDC70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD5022B2C38E04D00BBDC70 /* AppDelegate.swift */; };
 		6CD5022E2C38E04D00BBDC70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD5022D2C38E04D00BBDC70 /* SceneDelegate.swift */; };
 		6CD502302C38E04D00BBDC70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD5022F2C38E04D00BBDC70 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		6C7660D32C3EE81C001B3B80 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		6CB33EFE2C43A29D00A16D04 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		6CD502282C38E04D00BBDC70 /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CD5022B2C38E04D00BBDC70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CD5022D2C38E04D00BBDC70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				6CDCAAD42C38F1E000614471 /* QuestionBankTableViewController.swift */,
 				6CDCAAD62C38F3FA00614471 /* QuestionBuilderViewController.swift */,
 				6C7660D32C3EE81C001B3B80 /* QuizViewController.swift */,
+				6CB33EFE2C43A29D00A16D04 /* ResultViewController.swift */,
 			);
 			path = vc;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				6CDCAACE2C38ECF400614471 /* QuestionTableViewCell.swift in Sources */,
 				6CD5022C2C38E04D00BBDC70 /* AppDelegate.swift in Sources */,
 				6CD5022E2C38E04D00BBDC70 /* SceneDelegate.swift in Sources */,
+				6CB33EFF2C43A29D00A16D04 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

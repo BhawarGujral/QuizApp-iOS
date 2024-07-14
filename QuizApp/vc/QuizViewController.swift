@@ -49,28 +49,28 @@ class QuizViewController: UIViewController {
     }
     
     
-    @IBAction func firstOptionRadio(_ sender: UIButton) {
+    @IBAction func firstOptionRadio(_ sender: Any?) {
         resetRadioButtons()
-        sender.setImage(UIImage(systemName: "circle.fill"), for: .normal)
+        firstOptionButton.setImage(UIImage(systemName: "circle.fill"), for: .normal)
         selectedOption = firstOptionText.text
     }
     
-    @IBAction func secondOptionRadio(_ sender: UIButton) {
+    @IBAction func secondOptionRadio(_ sender: Any?) {
         resetRadioButtons()
-        sender.setImage(UIImage(systemName: "circle.fill"), for: .normal)
+        secondOptionButton.setImage(UIImage(systemName: "circle.fill"), for: .normal)
         selectedOption = secondOptionText.text
         
     }
     
-    @IBAction func thirdOptionRadio(_ sender: UIButton) {
+    @IBAction func thirdOptionRadio(_ sender: Any?) {
         resetRadioButtons()
-        sender.setImage(UIImage(systemName: "circle.fill"), for: .normal)
+        thirdOptionButton.setImage(UIImage(systemName: "circle.fill"), for: .normal)
         selectedOption = thirdOptionText.text
     }
     
-    @IBAction func fourthOptionRadio(_ sender: UIButton) {
+    @IBAction func fourthOptionRadio(_ sender: Any?) {
         resetRadioButtons()
-        sender.setImage(UIImage(systemName: "circle.fill"), for: .normal)
+        fourthOptionButton.setImage(UIImage(systemName: "circle.fill"), for: .normal)
         selectedOption = fourthOptionText.text
     }
     
@@ -89,6 +89,8 @@ class QuizViewController: UIViewController {
             questionIndex += 1
             setQuestion()
             slider.value = Float(questionIndex)
+        } else {
+            performSegue(withIdentifier: "toResult", sender: correctAnswer)
         }
         
     }

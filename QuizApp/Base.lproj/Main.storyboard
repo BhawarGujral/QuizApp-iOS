@@ -168,10 +168,10 @@
             </objects>
             <point key="canvasLocation" x="1577.8625954198474" y="703.52112676056345"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="ydn-eX-hh3">
             <objects>
-                <viewController id="DEp-fT-hvM" sceneMemberID="viewController">
+                <viewController id="DEp-fT-hvM" customClass="ResultViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rCd-B3-Moe">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,6 +187,9 @@
                         <viewLayoutGuide key="safeArea" id="7Wc-WA-IVS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="resultText" destination="Bia-bE-jDF" id="gIQ-dW-peI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ME9-kS-d3i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
