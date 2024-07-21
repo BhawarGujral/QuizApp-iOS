@@ -20,6 +20,7 @@ class QuestionBankTableViewController: UITableViewController,AddQuestionServiceP
     override func viewDidLoad() {
         super.viewDidLoad()
         QuestionBuilderViewController.shared.delegate = self;
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -31,6 +32,10 @@ class QuestionBankTableViewController: UITableViewController,AddQuestionServiceP
 //        questions = ((UIApplication.shared.delegate as? AppDelegate)?.questionBank)!
 //        questionsTable.reloadData()
 //    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 175
+    }
     
     func questionAddedSuccess(newQuestion: Question) {
         if sender == "NewQuestion"{
@@ -51,18 +56,21 @@ class QuestionBankTableViewController: UITableViewController,AddQuestionServiceP
             let newQuestionVC  = segue.destination as? QuestionBuilderViewController
             newQuestionVC?.sender = "NewQuestion"
             self.sender = "NewQuestion"
+            newQuestionVC?.delegate = self
         }else{
             let editQuestionVC  = segue.destination as? QuestionBuilderViewController
             editQuestionVC?.sender = "EditQuestion"
             self.sender = "EditQuestion"
             editQuestionVC?.selectedQuestion = questions[tableView.indexPathForSelectedRow!.row]
+            editQuestionVC?.delegate = self
         }
+        
     }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,6 +82,7 @@ class QuestionBankTableViewController: UITableViewController,AddQuestionServiceP
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! QuestionTableViewCell
         cell.questionLabel.text = questions[indexPath.row].question
+        cell.questionLabel.numberOfLines = 0;
         cell.correctOptionLabel.text = questions[indexPath.row].correctOption
         cell.incorrectOptionLabel1.text = questions[indexPath.row].incorrectOption1
         cell.incorrectOptionLabel2.text = questions[indexPath.row].incorrectOption2

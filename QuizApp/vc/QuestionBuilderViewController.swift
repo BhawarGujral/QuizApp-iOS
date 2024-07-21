@@ -60,6 +60,7 @@ class QuestionBuilderViewController: UIViewController {
         }
         let newQues = Question(question: questionText.text!, correctOption: correctOptionText.text!, incorrectOption1: incorrectOptionText1.text!, incorrectOption2: incorrectOptionText2.text!, incorrectOption3: incorrectOptionText3.text!)
         self.delegate?.questionAddedSuccess(newQuestion: newQues)
+        self.dismiss(animated: true)
     }
     
     @IBAction func cancelClicked(_ sender: Any) {

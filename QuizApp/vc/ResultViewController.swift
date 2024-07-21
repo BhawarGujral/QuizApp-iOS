@@ -12,9 +12,12 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var resultText: UILabel!
     
+    var correctAnswers = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        resultText.text = "The Correct Answers: " + String(correctAnswers)
         // Do any additional setup after loading the view.
     }
     

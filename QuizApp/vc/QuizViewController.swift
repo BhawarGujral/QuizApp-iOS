@@ -138,6 +138,12 @@ class QuizViewController: UIViewController {
         print(correctAnswer)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toResult"{
+            let resultVC  = segue.destination as? ResultViewController
+            resultVC?.correctAnswers = correctAnswer
+        }
+    }
     
     /*
     // MARK: - Navigation
